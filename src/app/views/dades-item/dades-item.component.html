@@ -1,0 +1,19 @@
+<hr />
+
+<ng-content class="title" select="[title]"></ng-content>
+<ng-content select="[description]"></ng-content>
+
+<app-data-table
+  class="contractes-table"
+  [columns]="columns"
+  [data]="data"
+></app-data-table>
+
+<span class="separator"></span>
+
+<app-chart [chartData]="data" [chartSeries]="series"></app-chart>
+
+<small
+  >Per a més informació visiteu el següent
+  <a [href]="moreInfo" target="_blank">enllaç.</a></small
+>

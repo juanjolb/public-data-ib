@@ -1,0 +1,19 @@
+@import 'ag-grid-community/styles/ag-grid.css';
+@import 'ag-grid-community/styles/ag-theme-quartz.css';
+
+body {
+    color: white;
+    margin: 50px auto;
+    max-width: 1280px;
+    /* background-color: #101828; */
+    background: linear-gradient(180deg, rgb(28, 42, 70) 0%, rgba(13,19,32,1) 100%);
+    box-sizing: border-box;
+    padding: 0 20px;
+    font-family: 'Roboto', system-ui;
+}
+a {
+    color: rgb(116, 163, 255);
+}
+.text-center {
+    text-align: center;
+}

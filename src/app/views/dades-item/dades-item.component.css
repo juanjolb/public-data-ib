@@ -1,0 +1,19 @@
+:host {
+    text-align: center !important;
+}
+small {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    gap: 5px;
+}
+hr {
+    opacity: 0.6;
+    margin: 40px auto;
+    max-width: 800px;
+}
+.separator {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
