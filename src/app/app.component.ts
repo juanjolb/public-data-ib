@@ -6,6 +6,7 @@ import { FooterComponent } from './views/footer/footer.component';
 import { ContractesComponent } from './components/contractes/contractes.component';
 import { ViatgesComponent } from './components/viatges/viatges.component';
 import { DespesesComponent } from './components/despeses/despeses.component';
+import { MapsComponent } from './components/maps/maps.component';
 
 @Component({
   selector: 'app-root',
@@ -16,6 +17,7 @@ import { DespesesComponent } from './components/despeses/despeses.component';
     ContractesComponent,
     ViatgesComponent,
     DespesesComponent,
+    MapsComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

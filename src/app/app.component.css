@@ -1,7 +1,7 @@
 h1 {
     font-size: 3em;
 }
-h1 .text-gradient {
+h1 .text-gradient-pink {
     --bg-size: 400%;
     --color-one: #C30045;
     --color-two:  #b4607e;
@@ -15,6 +15,22 @@ h1 .text-gradient {
     background-clip: text;
     -webkit-background-clip: text;
     animation: move-bg 10s infinite linear;
+}
+h2 .text-gradient-yellow {
+    --bg-size: 400%;
+    --color-one: #FFD700;
+    --color-two:  #FFA500;
+    background: linear-gradient(
+        90deg,
+        var(--color-one),
+        var(--color-two),
+        var(--color-one)
+      ) 0 0 / var(--bg-size) 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    animation: move-bg 10s infinite linear;
+
 }
 
 @keyframes move-bg {
