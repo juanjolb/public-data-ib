@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, HostListener, OnInit, inject } from '@angular/core';
 import { GoogleMap, MapPolygon } from '@angular/google-maps';
 import { GeoLocationService } from '../../services/geo-location.service';
 import { BeachInfo, BeachObject, Illa } from '../../types/platja';
@@ -10,7 +10,12 @@ import { CommonModule } from '@angular/common';
   imports: [GoogleMap, MapPolygon, CommonModule],
   template: `
     <div class="container">
-      <google-map height="400px" width="800px" [options]="options" class="maps">
+      <google-map
+        [options]="options"
+        class="maps"
+        [height]="mapSize.height"
+        [width]="mapSize.width"
+      >
         @for (beach of beaches; track $index) {
         <map-polygon
           [paths]="beach.coordinates"
@@ -36,6 +41,7 @@ import { CommonModule } from '@angular/common';
     .container {
       display: flex;
       justify-content: center;
+
     }
     .beach-info {
       position: absolute;
@@ -67,6 +73,11 @@ export class MapsComponent implements OnInit {
     zoom: 8,
   };
 
+  mapSize = {
+    width: '800px',
+    height: '400px',
+  };
+
   polygonDefaultOptions: google.maps.PolygonOptions = {
     fillOpacity: 0.5,
     strokeWeight: 2,
@@ -74,6 +85,16 @@ export class MapsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getPlatges();
+    this.onResize({ target: window });
+  }
+
+  // window size listener
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any): void {
+    let width = event.target.innerWidth;
+    if (width > 800) width = 800;
+    this.mapSize.width = width - 100 + 'px';
+    this.mapSize.height = width / 2 + 'px';
   }
 
   getPlatges(): void {
