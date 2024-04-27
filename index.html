@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr" data-critters-container>
+  <head>
+    <meta charset="utf-8">
+    <title>Catàleg de dades obertes de les Illes Balears</title>
+    <!-- add seo tags-->
+    <meta name="description" content="Catàleg de dades obertes de les Balears, dades obtingudes del portal de dades obertes del GOIB, Despeses, contractes i platges no oficials de les Balears">
+    <meta name="keywords" content="Platges no oficials balears, Despeses carrecs publics,Viatges Càrrecs Públics, Govern Balear, contractes govern balear">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <base href="/public-data-ib/">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  <style>body{color:#fff;margin:50px auto;max-width:1280px;background:linear-gradient(180deg,#1c2a46,#0d1320);box-sizing:border-box;padding:0 20px;font-family:Roboto,system-ui}
+</style><link rel="stylesheet" href="styles-OOY5AAEG.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-OOY5AAEG.css"></noscript></head>
+  <body>
+    <app-root></app-root>
+
+    <!-- GOOGLE MAPS SCRIPT -->
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        v: "weekly",
+        key: "AIzaSyDpSaAzWH2xfoNVUnQJhiWDSh6BPBCmOOc",
+      });
+    </script>
+  <script src="polyfills-374YU44C.js" type="module"></script><script src="main-YQL23ZKF.js" type="module"></script></body>
+</html>
